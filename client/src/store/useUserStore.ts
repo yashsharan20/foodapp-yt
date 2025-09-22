@@ -5,7 +5,7 @@ import type { LoginInputState, SignupInputState } from "@/schema/userSchema"
 import { toast } from "sonner"
 
 
-const API_END_POINT = "http://localhost:8000/api/v1/user"
+const API_END_POINT = "https://foodapp-yt.onrender.com/api/v1/user"
 axios.defaults.withCredentials=true
 
 type User = {
