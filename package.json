@@ -1,16 +1,16 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server/index.ts",
-    "build":"npm install && npm install --prefix client && npm run build --prefix client",
-    "start": "nodemon server/index.ts"
+    "stripe": "stripe listen --forward-to localhost:8000/api/v1/order/webhook",
+    "build": "tsc && npm run build --prefix client",
+    "start": "node --max-old-space-size=1024 dist/server/index.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cloudinary": "^2.7.0",
